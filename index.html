@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BOOKMATE | 책을 고르는 시간, 나를 알아가는 시간</title>
+
+    <meta name="description" content="오늘의 기분과 취향에 맞는 책을 발견하는 북 큐레이션 서비스 BOOKMATE.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- JavaScript -->
+    <script src="js/common.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body data-page="home">
+
+    <!-- 공통 헤더 -->
+    <div id="common-header"></div>
+
+    <main>
+
+        <!-- 01. HERO -->
+        <section class="hero">
+            <div class="hero-inner">
+
+                <div class="hero-copy">
+                    <p class="eyebrow">YOUR PERSONAL BOOK CURATION</p>
+
+                    <h1>
+                        책을 고르는 시간,<br>
+                        <span>나를 알아가는 시간.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        어떤 책을 읽어야 할지 고민되는 날,<br>
+                        지금의 기분과 취향에 어울리는 책을 만나보세요.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="test.html" class="btn btn-primary">
+                            나의 책 취향 찾기
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a href="books.html" class="btn btn-outline">
+                            책 둘러보기
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-wrap">
+                        <img src="./img/index top.jpg" alt="따뜻한 분위기 속에 놓인 책">
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="note-label">TODAY'S NOTE</span>
+                        <p>책 한 권이<br>하루의 분위기를 바꿀 수 있어요.</p>
+                    </div>
+
+                    <span class="hero-deco hero-deco-one" aria-hidden="true">✳</span>
+                    <span class="hero-deco hero-deco-two" aria-hidden="true">✦</span>
+                </div>
+
+            </div>
+
+            <div class="hero-bottom">
+                <span>FIND YOUR NEXT FAVORITE BOOK</span>
+                <span aria-hidden="true">↓</span>
+            </div>
+        </section>
+
+
+        <!-- 02. MOOD CURATION -->
+        <section class="mood-section section-padding">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">BOOKS FOR YOUR MOOD</p>
+                    <h2>오늘은 어떤 마음인가요?</h2>
+                </div>
+
+                <p class="section-description">
+                    지금의 기분에 어울리는 책을 골라보세요.
+                </p>
+            </div>
+
+            <div class="mood-grid">
+
+                <a href="books.html?mood=comfort" class="mood-card mood-comfort">
+                    <span class="mood-number">01</span>
+                    <div class="mood-card-content">
+                        <p class="mood-subtitle">WHEN YOU NEED REST</p>
+                        <h3>위로가 필요한 날</h3>
+                        <p>괜찮다는 말이 필요한 순간</p>
+                    </div>
+                    <span class="mood-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="books.html?mood=focus" class="mood-card mood-focus">
+                    <span class="mood-number">02</span>
+                    <div class="mood-card-content">
+                        <p class="mood-subtitle">WHEN YOU NEED FOCUS</p>
+                        <h3>생각이 많아지는 날</h3>
+                        <p>마음을 차분하게 정리하고 싶을 때</p>
+                    </div>
+                    <span class="mood-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="books.html?mood=change" class="mood-card mood-change">
+                    <span class="mood-number">03</span>
+                    <div class="mood-card-content">
+                        <p class="mood-subtitle">WHEN YOU NEED CHANGE</p>
+                        <h3>새로운 시작이 필요한 날</h3>
+                        <p>다른 시선과 용기를 얻고 싶을 때</p>
+                    </div>
+                    <span class="mood-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="books.html?mood=romance" class="mood-card mood-romance">
+                    <span class="mood-number">04</span>
+                    <div class="mood-card-content">
+                        <p class="mood-subtitle">WHEN YOU WANT LOVE</p>
+                        <h3>사랑이 궁금한 날</h3>
+                        <p>관계와 마음을 들여다보고 싶을 때</p>
+                    </div>
+                    <span class="mood-arrow" aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- 03. TODAY'S BOOK -->
+        <section class="today-section section-padding">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CURATED FOR YOU</p>
+                    <h2>오늘의 추천 도서</h2>
+                </div>
+
+                <a href="books.html" class="text-link">
+                    모든 책 보기 <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <div class="book-grid">
+
+                <!-- BOOK 01 -->
+                <article class="book-card">
+                    <a href="books.html" class="book-cover">
+                        <img src="./img/나를 돌보는 시간.jpg" alt="책 표지 이미지" loading="lazy">
+                        <span class="book-badge">TODAY'S PICK</span>
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">에세이 · 위로</p>
+                        <h3>
+                            <a href="books.html">나를 돌보는 시간</a>
+                        </h3>
+                        <p class="book-author">오늘의 나에게 필요한 이야기</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#마음챙김</span>
+
+                            <button type="button" class="favorite-btn" data-favorite="uncomfortable"
+                                aria-label="나를 돌보는 시간 즐겨찾기" aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BOOK 02 -->
+                <article class="book-card">
+                    <a href="books.html" class="book-cover">
+                        <img src="./img/달러구트 꿈 백화점.jfif" alt="책과 독서 공간 이미지" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">소설 · 일상</p>
+                        <h3>
+                            <a href="books.html">달러구트 꿈 백화점</a>
+                        </h3>
+                        <p class="book-author">잠들어야만 입장할 수 있는 곳</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#따뜻한이야기</span>
+
+                            <button type="button" class="favorite-btn" data-favorite="dalgurtt"
+                                aria-label="달러구트 꿈 백화점 즐겨찾기" aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BOOK 03 -->
+                <article class="book-card">
+                    <a href="books.html" class="book-cover">
+                        <img src="./img/어서오세요 휴남동 서점입니다.jpg" alt="책을 읽으며 보내는 시간" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">소설 · 관계</p>
+                        <h3>
+                            <a href="books.html">어서 오세요, 휴남동 서점입니다</a>
+                        </h3>
+                        <p class="book-author">서점에서 시작되는 작은 변화</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#휴식</span>
+
+                            <button type="button" class="favorite-btn" data-favorite="hyunamdong"
+                                aria-label="어서 오세요, 휴남동 서점입니다 즐겨찾기" aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BOOK 04 -->
+                <article class="book-card">
+                    <a href="books.html" class="book-cover">
+                        <img src="./img/문장 수집가들의 인생 가이드.jpg" alt="차분한 분위기의 독서 공간" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">인문 · 문장</p>
+                        <h3>
+                            <a href="books.html">문장 수집가들의 인생 가이드</a>
+                        </h3>
+                        <p class="book-author">오래 곁에 두고 싶은 문장들</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#문장기록</span>
+
+                            <button type="button" class="favorite-btn" data-favorite="sentence"
+                                aria-label="문장 수집가의 하루 즐겨찾기" aria-pressed="false">
+                                ♡
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- 04. QUOTE -->
+        <section class="quote-section">
+            <div class="quote-inner">
+                <p class="eyebrow">A MOMENT WITH BOOKMATE</p>
+
+                <span class="quote-mark" aria-hidden="true">“</span>
+
+                <blockquote>
+                    책은 우리에게 다른 삶을<br>
+                    살아볼 수 있는 기회를 줍니다.
+                </blockquote>
+
+                <p class="quote-caption">
+                    오늘의 당신에게 어울리는 한 권을 만나보세요.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- 05. POPULAR BOOKS -->
+        <section class="popular-section section-padding">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">LOVED BY READERS</p>
+                    <h2>많은 사람이 찾는 책</h2>
+                </div>
+
+                <a href="books.html" class="text-link">
+                    더 둘러보기 <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <div class="popular-list">
+
+                <a href="books.html" class="popular-item">
+                    <span class="popular-rank">01</span>
+                    <div class="popular-book-image">
+                        <img src="./img/불편한 편의점.webp" alt="도서 이미지" loading="lazy">
+                    </div>
+                    <div class="popular-book-info">
+                        <h3>불편한 편의점</h3>
+                        <p>김호연 · 소설</p>
+                    </div>
+                    <span class="popular-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="books.html" class="popular-item">
+                    <span class="popular-rank">02</span>
+                    <div class="popular-book-image">
+                        <img src="./img/달러구트 꿈 백화점.jfif" alt="도서 이미지" loading="lazy">
+                    </div>
+                    <div class="popular-book-info">
+                        <h3>달러구트 꿈 백화점</h3>
+                        <p>이미예 · 소설</p>
+                    </div>
+                    <span class="popular-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="books.html" class="popular-item">
+                    <span class="popular-rank">03</span>
+                    <div class="popular-book-image">
+                        <img src="./img/어서오세요 휴남동 서점입니다.jpg" alt="도서 이미지" loading="lazy">
+                    </div>
+                    <div class="popular-book-info">
+                        <h3>어서 오세요, 휴남동 서점입니다</h3>
+                        <p>황보름 · 소설</p>
+                    </div>
+                    <span class="popular-arrow" aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- 06. BOOK TEST CTA -->
+        <section class="test-cta-section section-padding">
+            <div class="test-cta">
+                <div class="test-cta-copy">
+                    <p class="eyebrow">LET'S FIND YOUR BOOK</p>
+
+                    <h2>
+                        당신의 취향을 따라<br>
+                        책을 찾아볼까요?
+                    </h2>
+
+                    <p>
+                        몇 가지 질문에 답하고<br>
+                        지금의 나에게 어울리는 책을 발견해 보세요.
+                    </p>
+
+                    <a href="test.html" class="btn btn-primary">
+                        책 취향 테스트 시작하기
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+                <div class="test-cta-visual">
+                    <img src="./img/index bottom.jpg" alt="책이 가득한 아늑한 서점" loading="lazy">
+                    <span class="test-cta-deco" aria-hidden="true">READ<br>YOUR<br>MOOD</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 공통 푸터 -->
+    <div id="common-footer"></div>
+
+</body>
+
+</html>

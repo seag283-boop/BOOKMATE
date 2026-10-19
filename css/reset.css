@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/*  01. RESET */
+
+/* 모든 요소의 기본 여백과 크기 계산 방식 초기화 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본 문서 설정 */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* 문서 기본 스타일 */
+body {
+    min-height: 100vh;
+}
+
+/* 제목 기본 크기 및 굵기 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* 목록 기호 제거 */
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+/* 링크 기본 스타일 제거 */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 버튼 기본 스타일 초기화 */
+button {
+    border: 0;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* 입력 요소 글꼴 통일 */
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* 버튼과 입력 요소의 기본 테두리 */
+input,
+textarea,
+select {
+    border-radius: 0;
+}
+
+/* 이미지 및 미디어 요소 */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 이미지의 기본 테두리 제거 */
+img {
+    border-style: none;
+}
+
+/* 표 기본 설정 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 인용문 기본 스타일 초기화 */
+blockquote,
+q {
+    quotes: none;
+}
+
+/* 숨겨진 요소 */
+[hidden] {
+    display: none !important;
+}
+
+/* 모션 최소화 설정을 사용하는 방문자 배려 */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

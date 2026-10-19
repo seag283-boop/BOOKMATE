@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MY BOOK TYPE | BOOKMATE</title>
+    <meta name="description" content="BOOKMATE 독서 취향 테스트 결과를 확인하고 나에게 어울리는 책을 만나 보세요.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/result.css">
+
+    <script src="js/common.js" defer></script>
+    <script src="js/result.js" defer></script>
+</head>
+
+<body data-page="test">
+
+    <!-- 공통 헤더 -->
+    <div id="common-header"></div>
+
+    <main class="result-page">
+
+        <!-- 01. RESULT HERO -->
+        <section class="result-hero">
+            <div class="result-hero-inner">
+
+                <p class="eyebrow">YOUR READING PERSONALITY</p>
+
+                <h1>
+                    당신의 독서 취향을<br>
+                    <span>발견했어요.</span>
+                </h1>
+
+                <p class="result-hero-description">
+                    열 개의 질문을 통해 발견한 당신의 취향.<br>
+                    지금의 나에게 어울리는 책을 만나 보세요.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- 02. RESULT CONTENT -->
+        <section class="result-section section-padding">
+
+            <!-- 결과 데이터가 없을 때 -->
+            <div class="result-empty" id="result-empty" hidden>
+
+                <p class="eyebrow">LET'S FIND YOUR BOOK</p>
+
+                <h2>아직 발견하지 못한<br>당신의 독서 취향</h2>
+
+                <p>
+                    먼저 독서 취향 테스트를 완료해 주세요.<br>
+                    당신에게 어울리는 책을 찾아 드릴게요.
+                </p>
+
+                <a href="test.html" class="btn btn-primary">
+                    테스트 시작하기
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+
+            <!-- 테스트 결과 -->
+            <div class="result-content" id="result-content" hidden>
+
+                <!-- 결과 유형 카드 -->
+                <article class="result-type-card">
+
+                    <div class="result-type-copy">
+
+                        <p class="result-type-label" id="result-type-label">
+                            YOUR BOOK TYPE
+                        </p>
+
+                        <h2 id="result-title">
+                            마음 충전형
+                        </h2>
+
+                        <p class="result-subtitle" id="result-subtitle">
+                            따뜻한 위로가 필요한 당신
+                        </p>
+
+                        <p class="result-description" id="result-description">
+                            당신에게 어울리는 독서 취향 설명이 표시됩니다.
+                        </p>
+
+                        <div class="result-keywords" id="result-keywords">
+                            <!-- JS에서 키워드 생성 -->
+                        </div>
+
+                    </div>
+
+                    <div class="result-type-visual" id="result-type-visual" aria-hidden="true">
+
+                        <span class="result-visual-small">MY READING TYPE</span>
+
+                        <div class="result-visual-circle">
+                            <span id="result-visual-symbol">BOOK</span>
+                        </div>
+
+                        <span class="result-visual-caption">
+                            A BOOK FOR YOUR MOMENT
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 취향 점수 -->
+                <section class="result-score-section">
+
+                    <div class="result-section-heading">
+                        <p class="eyebrow">YOUR READING TASTE</p>
+
+                        <h3>나의 독서 취향 살펴보기</h3>
+
+                        <p>
+                            어떤 취향의 답변을 많이 선택했는지 확인해 보세요.
+                        </p>
+                    </div>
+
+                    <div class="result-scores" id="result-scores">
+                        <!-- JS에서 점수 표시 -->
+                    </div>
+
+                </section>
+
+
+                <!-- 추천 도서 -->
+                <section class="result-books-section">
+
+                    <div class="result-section-heading">
+                        <p class="eyebrow">BOOKS FOR YOU</p>
+
+                        <h3>당신을 위한 책</h3>
+
+                        <p id="result-books-description">
+                            지금의 취향에 어울리는 책을 골라 보았어요.
+                        </p>
+                    </div>
+
+                    <div class="result-books-grid" id="result-books-grid">
+                        <!-- JS에서 추천 도서 카드 생성 -->
+                    </div>
+
+                    <p class="result-books-notice">
+                        책 표지를 선택하면 전체 도서 목록을 확인할 수 있어요.
+                    </p>
+
+                </section>
+
+
+                <!-- TIP -->
+                <section class="result-tip">
+
+                    <div class="result-tip-heading">
+                        <p class="eyebrow">BOOKMATE'S NOTE</p>
+
+                        <h3>당신에게 전하는 작은 추천</h3>
+                    </div>
+
+                    <p id="result-tip-text">
+                        오늘의 기분에 맞는 책 한 권으로 나만의 시간을 만들어 보세요.
+                    </p>
+
+                </section>
+
+
+                <!-- ACTIONS -->
+                <div class="result-actions">
+
+                    <a href="books.html" class="btn btn-primary">
+                        책 더 둘러보기
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <button type="button" class="btn btn-outline" id="retry-test">
+                        테스트 다시 하기
+                    </button>
+
+                    <a href="index.html" class="result-home-link">
+                        HOME으로 돌아가기
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- 공통 푸터 -->
+    <div id="common-footer"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MY LIBRARY | BOOKMATE</title>
+    <meta name="description" content="관심 있는 책을 모으고 나만의 독서 기록을 관리해 보세요.">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="js/common.js" defer></script>
+    <script src="js/library.js" defer></script>
+</head>
+
+<body data-page="library">
+
+    <!-- 공통 헤더 -->
+    <div id="common-header"></div>
+
+    <main class="library-page">
+
+        <!-- 페이지 소개 -->
+        <section class="library-hero">
+            <div class="library-container">
+                <p class="section-eyebrow">YOUR PERSONAL BOOKSHELF</p>
+
+                <h1>
+                    MY<br>
+                    <span>LIBRARY</span>
+                </h1>
+
+                <p class="library-hero-description">
+                    마음에 담아 둔 책들을 모아 보세요.<br>
+                    한 권씩 쌓이는 기록이 나만의 취향이 됩니다.
+                </p>
+
+                <a href="books.html" class="library-hero-link">
+                    책 둘러보기
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <div class="library-hero-decoration" aria-hidden="true">
+                <span class="decoration-circle"></span>
+                <span class="decoration-text">READ<br>YOUR<br>OWN WAY</span>
+            </div>
+        </section>
+
+        <!-- 독서 현황 -->
+        <section class="library-overview">
+            <div class="library-container">
+
+                <div class="library-section-heading">
+                    <div>
+                        <p class="section-eyebrow">YOUR READING JOURNEY</p>
+                        <h2>나의 독서 현황</h2>
+                    </div>
+
+                    <p class="library-section-description">
+                        지금까지 모은 책과 독서 기록을 확인해 보세요.
+                    </p>
+                </div>
+
+                <div class="library-stats">
+
+                    <article class="library-stat-card">
+                        <span class="stat-label">MY BOOKS</span>
+                        <p class="stat-number" id="total-books">0</p>
+                        <p class="stat-description">관심 도서</p>
+                    </article>
+
+                    <article class="library-stat-card">
+                        <span class="stat-label">TO READ</span>
+                        <p class="stat-number" id="unread-books">0</p>
+                        <p class="stat-description">읽고 싶은 책</p>
+                    </article>
+
+                    <article class="library-stat-card">
+                        <span class="stat-label">READING</span>
+                        <p class="stat-number" id="reading-books">0</p>
+                        <p class="stat-description">읽는 중인 책</p>
+                    </article>
+
+                    <article class="library-stat-card">
+                        <span class="stat-label">COMPLETED</span>
+                        <p class="stat-number" id="completed-books">0</p>
+                        <p class="stat-description">다 읽은 책</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 나의 책장 -->
+        <section class="library-books-section">
+            <div class="library-container">
+
+                <div class="library-section-heading">
+                    <div>
+                        <p class="section-eyebrow">COLLECT YOUR FAVORITES</p>
+                        <h2>나의 책장</h2>
+                    </div>
+
+                    <p class="library-section-description">
+                        마음에 드는 책을 모으고 독서 상태를 기록해 보세요.
+                    </p>
+                </div>
+
+                <!-- 책장 필터 -->
+                <div class="library-toolbar">
+
+                    <div class="library-filter-list" role="group" aria-label="독서 상태 필터">
+                        <button type="button" class="library-filter-btn is-active" data-status="all"
+                            aria-pressed="true">
+                            전체
+                        </button>
+
+                        <button type="button" class="library-filter-btn" data-status="unread" aria-pressed="false">
+                            읽고 싶은 책
+                        </button>
+
+                        <button type="button" class="library-filter-btn" data-status="reading" aria-pressed="false">
+                            읽는 중
+                        </button>
+
+                        <button type="button" class="library-filter-btn" data-status="completed" aria-pressed="false">
+                            완독
+                        </button>
+                    </div>
+
+                    <a href="books.html" class="library-add-link">
+                        + 책 추가하기
+                    </a>
+
+                </div>
+
+                <!-- 도서 목록 -->
+                <div class="library-books-grid" id="library-books-grid" aria-live="polite"></div>
+
+                <!-- 저장된 책이 없을 때 -->
+                <div class="library-empty" id="library-empty" hidden>
+                    <span class="library-empty-icon" aria-hidden="true">♡</span>
+
+                    <h3>아직 책장이 비어 있어요.</h3>
+
+                    <p>
+                        마음에 드는 책을 찾아 나만의 책장을 채워 보세요.
+                    </p>
+
+                    <a href="books.html" class="library-empty-link">
+                        책 둘러보기
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 독서 메시지 -->
+        <section class="library-quote-section">
+            <div class="library-container">
+                <p class="section-eyebrow">A LITTLE REMINDER</p>
+
+                <p class="library-quote">
+                    책을 읽는다는 것은<br>
+                    <span>나를 알아가는 또 하나의 방법.</span>
+                </p>
+
+                <p class="library-quote-description">
+                    빠르게 읽지 않아도 괜찮아요.<br>
+                    당신의 속도로 한 페이지씩 채워 가면 됩니다.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 공통 푸터 -->
+    <div id="common-footer"></div>
+
+</body>
+
+</html>

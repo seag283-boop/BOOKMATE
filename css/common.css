@@ -1,0 +1,567 @@
+@charset "UTF-8";
+
+/* 01. GOOGLE FONTS */
+
+/* 폰트는 HTML의 link 태그에서 불러옴 */
+
+
+/* 02. CSS VARIABLES */
+
+:root {
+    --color-bg: #F7F3EB;
+    --color-text: #3D342B;
+    --color-beige: #D8C6A5;
+    --color-olive: #777D5A;
+    --color-white: #FFFFFF;
+    --color-border: #E5DED2;
+    --color-muted: #82796D;
+
+    --font-heading: "Gowun Batang", serif;
+    --font-body: "Pretendard", sans-serif;
+
+    --container-width: 1240px;
+    --header-height: 84px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* 03. GLOBAL */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: var(--font-body);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    color: inherit;
+    cursor: pointer;
+}
+
+button,
+input,
+textarea,
+select {
+    font-size: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--color-beige);
+    color: var(--color-text);
+}
+
+
+/* 04. COMMON TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+.logo-text {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.eyebrow {
+    margin-bottom: 16px;
+    color: var(--color-olive);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.section-padding {
+    padding: 120px 40px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 3vw, 42px);
+}
+
+.section-description {
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-text);
+    font-size: 13px;
+    transition:
+        color var(--transition),
+        border-color var(--transition);
+}
+
+.text-link:hover {
+    color: var(--color-olive);
+    border-color: var(--color-olive);
+}
+
+
+/* 05. LAYOUT */
+
+.header-inner,
+.footer-inner {
+    width: min(100% - 80px, var(--container-width));
+    margin: 0 auto;
+}
+
+
+/* 06. HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--color-bg);
+    box-shadow: 0 2px 12px rgba(61, 52, 43, 0.06);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--header-height);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--color-olive);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 21px;
+    line-height: 1;
+}
+
+.logo-text {
+    font-size: 20px;
+    letter-spacing: 0.04em;
+}
+
+.gnb {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.gnb a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    color: var(--color-muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    transition: color var(--transition);
+}
+
+.gnb a::after {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    left: 0;
+    height: 1px;
+    background: var(--color-olive);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+}
+
+.gnb a:hover,
+.gnb a.active {
+    color: var(--color-text);
+}
+
+.gnb a:hover::after,
+.gnb a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* 07. MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: transparent;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 17px;
+    height: 1px;
+    background: var(--color-text);
+    transition:
+        transform var(--transition),
+        width var(--transition);
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+}
+
+
+/* 08. BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-height: 52px;
+    padding: 0 24px;
+    border: 1px solid transparent;
+    font-size: 13px;
+    font-weight: 600;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--color-olive);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background: var(--color-text);
+}
+
+.btn-outline {
+    border-color: var(--color-text);
+    background: transparent;
+    color: var(--color-text);
+}
+
+.btn-outline:hover {
+    background: var(--color-text);
+    color: var(--color-white);
+}
+
+
+/* 09. FOOTER */
+
+.footer {
+    padding: 72px 40px 24px;
+    background: #EDE6D9;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 0.7fr 1fr;
+    gap: 60px;
+    padding-bottom: 64px;
+}
+
+.footer-brand>p {
+    margin-top: 22px;
+    color: var(--color-muted);
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.footer-heading {
+    margin-bottom: 22px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.footer-links {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links .footer-heading {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--color-muted);
+    font-size: 12px;
+    transition: color var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--color-text);
+}
+
+.footer-description>p:not(.footer-heading) {
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.footer-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-text);
+    font-size: 12px;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(61, 52, 43, 0.15);
+    color: var(--color-muted);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+}
+
+
+/* 10. RESPONSIVE - TABLET */
+
+@media (max-width: 1024px) {
+    .section-padding {
+        padding: 90px 30px;
+    }
+
+    .header-inner,
+    .footer-inner {
+        width: calc(100% - 60px);
+    }
+
+    .gnb {
+        gap: 24px;
+    }
+
+    .footer-top {
+        gap: 35px;
+    }
+}
+
+
+/* 11. RESPONSIVE - MOBILE */
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 70px;
+    }
+
+    .header-inner,
+    .footer-inner {
+        width: calc(100% - 40px);
+    }
+
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 19px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .gnb {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 20px 20px;
+        border-bottom: 1px solid var(--color-border);
+        background: var(--color-bg);
+    }
+
+    .gnb.is-open {
+        display: flex;
+    }
+
+    .gnb a {
+        padding: 15px 0;
+        border-bottom: 1px solid var(--color-border);
+        font-size: 12px;
+    }
+
+    .gnb a:last-child {
+        border-bottom: 0;
+    }
+
+    .gnb a::after {
+        display: none;
+    }
+
+    .section-padding {
+        padding: 72px 20px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .section-description {
+        font-size: 13px;
+    }
+
+    .footer {
+        padding: 55px 20px 22px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 24px;
+        padding-bottom: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-description {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 9px;
+    }
+}
+
+
+/* 12. SMALL MOBILE */
+
+@media (max-width: 420px) {
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .btn {
+        gap: 10px;
+        min-height: 48px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand,
+    .footer-description {
+        grid-column: auto;
+    }
+}
+
+/* 헤더 상단 고정 */
+#common-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: #F7F3EB;
+}
+
+#common-header header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #F7F3EB;
+}

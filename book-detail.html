@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BOOKMATE에서 책의 줄거리와 독자 후기, 추천 정보를 확인해 보세요.">
+    <title>책 상세 정보 | BOOKMATE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/book-detail.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- 공통 헤더 및 푸터 -->
+    <script src="./js/common.js" defer></script>
+    <script src="./js/book-detail.js" defer></script>
+</head>
+
+<body data-page="books">
+
+    <!-- 공통 헤더 -->
+    <div id="common-header"></div>
+
+    <main class="book-detail">
+
+        <!-- 페이지 경로 -->
+        <nav class="detail-breadcrumb" aria-label="현재 위치">
+            <a href="./index.html">HOME</a>
+            <span>/</span>
+            <a href="./books.html">BOOKS</a>
+            <span>/</span>
+            <span>BOOK DETAIL</span>
+        </nav>
+
+        <!-- 책 기본 정보 -->
+        <section class="detail-intro">
+
+            <div class="detail-cover">
+                <img src="./img/불편한 편의점.webp" alt="불편한 편의점 책 표지" class="detail-cover-image">
+                <span class="detail-cover-caption">BOOKMATE PICK</span>
+            </div>
+
+            <div class="detail-info">
+
+                <span class="detail-category">NOVEL · 소설</span>
+
+                <h1 class="detail-title">불편한 편의점</h1>
+
+                <p class="detail-author">김호연 지음</p>
+
+                <p class="detail-copy">
+                    조금 불편한 편의점에서 만난 사람들.
+                    평범한 하루 속에서 발견하는 따뜻한 위로와 작은 변화.
+                </p>
+
+                <!-- 평점 -->
+                <div class="detail-rating">
+                    <span class="rating-stars" aria-label="별점 4.5점">★★★★★</span>
+                    <strong>4.5</strong>
+                    <span class="rating-count">후기 128개</span>
+                </div>
+
+                <!-- 관심 통계 -->
+                <div class="detail-stats">
+
+                    <div class="detail-stat">
+                        <span class="stat-number">328</span>
+                        <span class="stat-label">관심 도서 등록</span>
+                    </div>
+
+                    <div class="detail-stat">
+                        <span class="stat-number">128</span>
+                        <span class="stat-label">독자 후기</span>
+                    </div>
+
+                    <div class="detail-stat">
+                        <span class="stat-number">92%</span>
+                        <span class="stat-label">추천 의향</span>
+                    </div>
+
+                </div>
+
+                <!-- 버튼 -->
+                <div class="detail-actions">
+                    <button type="button" class="detail-favorite-btn" id="detail-favorite-btn">
+                        ♡ 관심 도서 추가
+                    </button>
+
+                    <a href="./books.html" class="detail-list-btn">
+                        목록으로 돌아가기
+                    </a>
+                </div>
+
+                <p class="detail-notice">
+                    * 관심 도서 수와 평점은 디자인용 예시 데이터입니다.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- 책 줄거리 -->
+        <section class="detail-section detail-summary" id="book-summary">
+
+            <div class="section-heading">
+                <span class="section-eyebrow">ABOUT THIS BOOK</span>
+                <h2>이 책은 어떤 이야기인가요?</h2>
+            </div>
+
+            <div class="summary-content">
+
+                <p>
+                    서울의 한 동네에 자리한 작은 편의점.
+                    이곳에는 각자의 사정과 고민을 안고 살아가는 사람들이 찾아옵니다.
+                    어느 날 편의점의 야간 아르바이트를 맡게 된 독특한 손님을 중심으로
+                    다양한 인물들의 이야기가 조금씩 연결됩니다.
+                </p>
+
+                <p>
+                    서툴고 어색한 만남 속에서 사람들은 서로의 이야기를 듣고,
+                    무심코 건넨 한마디와 작은 친절을 통해 조금씩 달라집니다.
+                    특별할 것 없는 일상 속에서도 누군가에게는 큰 위로가 될 수 있다는
+                    사실을 따뜻하게 전하는 소설입니다.
+                </p>
+
+                <blockquote class="detail-quote">
+                    때로는 낯선 사람의 작은 친절이 하루를 버티게 하는 힘이 된다.
+                </blockquote>
+
+                <p class="summary-disclaimer">
+                    ※ 위 문장은 책의 분위기를 표현한 요약 문구이며 원문 인용이 아닙니다.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- 핵심 키워드 -->
+        <section class="detail-section detail-keywords">
+
+            <div class="section-heading">
+                <span class="section-eyebrow">KEYWORDS</span>
+                <h2>이 책을 표현하는 단어</h2>
+            </div>
+
+            <div class="keyword-list">
+                <span class="keyword">#일상의위로</span>
+                <span class="keyword">#따뜻한사람들</span>
+                <span class="keyword">#작은친절</span>
+                <span class="keyword">#인간관계</span>
+                <span class="keyword">#잔잔한감동</span>
+            </div>
+
+        </section>
+
+        <!-- 추천 대상 -->
+        <section class="detail-section detail-recommend">
+
+            <div class="section-heading">
+                <span class="section-eyebrow">RECOMMENDED FOR YOU</span>
+                <h2>이런 사람에게 추천해요</h2>
+                <p>지금 당신의 마음과 가까운 항목을 찾아보세요.</p>
+            </div>
+
+            <div class="recommend-grid">
+
+                <article class="recommend-card">
+                    <span class="recommend-number">01</span>
+                    <h3>따뜻한 위로가 필요한 사람</h3>
+                    <p>
+                        복잡한 생각을 잠시 내려놓고
+                        다정한 이야기를 읽고 싶을 때.
+                    </p>
+                </article>
+
+                <article class="recommend-card">
+                    <span class="recommend-number">02</span>
+                    <h3>편안한 소설을 찾는 사람</h3>
+                    <p>
+                        어렵고 무거운 이야기보다
+                        일상에서 시작되는 이야기를 좋아할 때.
+                    </p>
+                </article>
+
+                <article class="recommend-card">
+                    <span class="recommend-number">03</span>
+                    <h3>사람들의 이야기가 궁금한 사람</h3>
+                    <p>
+                        서로 다른 사람들이 만나
+                        변화하는 과정을 지켜보고 싶을 때.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 독자 후기 -->
+        <section class="detail-section detail-reviews" id="book-reviews">
+
+            <div class="reviews-heading">
+
+                <div class="section-heading">
+                    <span class="section-eyebrow">READERS' VOICES</span>
+                    <h2>먼저 읽은 사람들의 이야기</h2>
+                    <p>책을 읽고 느낀 점을 모아봤어요.</p>
+                </div>
+
+                <div class="reviews-summary">
+                    <span class="reviews-big-rating">4.5</span>
+                    <span class="rating-stars" aria-label="별점 4.5점">★★★★★</span>
+                    <span class="reviews-total">후기 128개 · 예시 데이터</span>
+                </div>
+
+            </div>
+
+            <div class="review-list">
+
+                <!-- 후기 1 -->
+                <article class="review-card">
+
+                    <div class="review-top">
+                        <div class="review-user">
+                            <span class="review-avatar">A</span>
+                            <div>
+                                <strong>책읽는하루</strong>
+                                <span class="review-date">2026.09.21</span>
+                            </div>
+                        </div>
+
+                        <span class="review-rating">★★★★★</span>
+                    </div>
+
+                    <h3>힘들었던 하루에 작은 위로가 됐어요.</h3>
+
+                    <p>
+                        특별한 사건보다 사람들 사이의 따뜻함이 기억에 남았어요.
+                        책을 덮고 나니 주변 사람들에게 조금 더 다정해지고 싶어졌습니다.
+                    </p>
+
+                    <div class="review-bottom">
+                        <span class="review-tag">#따뜻한위로</span>
+                        <span class="review-helpful">도움이 됐어요 24</span>
+                    </div>
+
+                </article>
+
+                <!-- 후기 2 -->
+                <article class="review-card">
+
+                    <div class="review-top">
+                        <div class="review-user">
+                            <span class="review-avatar">B</span>
+                            <div>
+                                <strong>느린독서</strong>
+                                <span class="review-date">2026.09.14</span>
+                            </div>
+                        </div>
+
+                        <span class="review-rating">★★★★★</span>
+                    </div>
+
+                    <h3>부담 없이 읽기 좋은 소설!</h3>
+
+                    <p>
+                        등장인물들의 사연이 이어지는 방식이 좋았어요.
+                        바쁜 일상 중간에 잠깐 쉬어 가고 싶을 때 추천하고 싶은 책입니다.
+                    </p>
+
+                    <div class="review-bottom">
+                        <span class="review-tag">#편안한독서</span>
+                        <span class="review-helpful">도움이 됐어요 18</span>
+                    </div>
+
+                </article>
+
+                <!-- 후기 3 -->
+                <article class="review-card">
+
+                    <div class="review-top">
+                        <div class="review-user">
+                            <span class="review-avatar">C</span>
+                            <div>
+                                <strong>문장수집가</strong>
+                                <span class="review-date">2026.08.30</span>
+                            </div>
+                        </div>
+
+                        <span class="review-rating">★★★★☆</span>
+                    </div>
+
+                    <h3>일상 속 인연을 다시 생각하게 됐어요.</h3>
+
+                    <p>
+                        엄청난 반전이 있는 이야기라기보다 잔잔하게 흘러가는 이야기예요.
+                        인물들의 변화와 관계에 집중해서 읽으면 더 재미있습니다.
+                    </p>
+
+                    <div class="review-bottom">
+                        <span class="review-tag">#인간관계</span>
+                        <span class="review-helpful">도움이 됐어요 12</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p class="review-disclaimer">
+                * 위 독자 후기와 평점은 디자인 확인을 위한 가상 예시이며 실제 이용자 리뷰가 아닙니다.
+            </p>
+
+        </section>
+
+        <!-- 하단 추천 -->
+        <section class="detail-bottom">
+
+            <span class="section-eyebrow">YOUR NEXT PAGE</span>
+
+            <h2>다음에는 어떤 책을 만나볼까요?</h2>
+
+            <p>
+                지금의 마음에 어울리는 또 다른 이야기를 찾아보세요.
+            </p>
+
+            <a href="./books.html" class="detail-bottom-btn">
+                다른 책 둘러보기
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- 공통 푸터 -->
+    <div id="common-footer"></div>
+
+
+
+</body>
+
+</html>

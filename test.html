@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BOOK TEST | BOOKMATE</title>
+    <meta name="description" content="BOOKMATE에서 나의 독서 취향을 발견하고 지금의 나에게 어울리는 책을 찾아보세요.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/test.css">
+
+    <script src="js/common.js" defer></script>
+    <script src="js/test.js" defer></script>
+</head>
+
+<body data-page="test">
+
+    <!-- 공통 헤더 -->
+    <div id="common-header"></div>
+
+    <main class="test-page">
+
+        <!-- 01. TEST HERO -->
+        <section class="test-hero">
+            <div class="test-hero-inner">
+
+                <p class="eyebrow">FIND YOUR BOOKMATE</p>
+
+                <h1>
+                    당신의 마음은<br>
+                    <span>어떤 이야기를 찾고 있나요?</span>
+                </h1>
+
+                <p class="test-hero-description">
+                    평소의 취향과 지금의 기분을 따라가다 보면<br>
+                    당신에게 어울리는 책을 발견할 수 있을 거예요.
+                </p>
+
+                <div class="test-hero-bottom">
+                    <span>10 QUESTIONS</span>
+                    <span>YOUR READING JOURNEY STARTS HERE</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 02. TEST INTRO -->
+        <section class="test-section section-padding">
+
+            <div class="test-intro" id="test-intro">
+
+                <div class="test-intro-content">
+                    <p class="eyebrow">A LITTLE TEST FOR YOU</p>
+
+                    <h2>
+                        나를 알아가는<br>
+                        작은 독서 여행
+                    </h2>
+
+                    <p class="test-intro-description">
+                        정답은 없어요.<br>
+                        지금 마음이 가는 답을 솔직하게 선택해 주세요.
+                        <br><br>
+                        10개의 질문을 통해 당신의 독서 취향을 알아보고,
+                        취향에 맞는 책을 추천해 드릴게요.
+                    </p>
+
+                    <ul class="test-info-list">
+                        <li>
+                            <span class="test-info-number">01</span>
+                            <span>총 10개의 질문</span>
+                        </li>
+                        <li>
+                            <span class="test-info-number">02</span>
+                            <span>약 2분 소요</span>
+                        </li>
+                        <li>
+                            <span class="test-info-number">03</span>
+                            <span>나만의 책 추천 결과</span>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="btn btn-primary" id="start-test">
+                        테스트 시작하기
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+
+                <div class="test-intro-visual" aria-hidden="true">
+                    <div class="test-visual-circle">
+                        <span class="test-visual-small">YOUR NEXT</span>
+                        <span class="test-visual-title">Favorite<br>Book</span>
+                        <span class="test-visual-line"></span>
+                        <span class="test-visual-caption">A BOOK JUST FOR YOU</span>
+                    </div>
+                    <span class="test-visual-deco deco-one">✳</span>
+                    <span class="test-visual-deco deco-two">✦</span>
+                    <span class="test-visual-deco deco-three">❋</span>
+                </div>
+
+            </div>
+
+
+            <!-- 03. QUIZ -->
+            <div class="quiz-container" id="quiz-container" hidden>
+
+                <!-- 진행 상태 -->
+                <div class="quiz-progress-area">
+
+                    <div class="quiz-progress-text">
+                        <span>YOUR READING JOURNEY</span>
+                        <span>
+                            <strong id="current-question">01</strong>
+                            <span aria-hidden="true"> / </span>
+                            <span id="total-questions">10</span>
+                        </span>
+                    </div>
+
+                    <div class="quiz-progress-track" id="quiz-progress-track" role="progressbar" aria-label="테스트 진행률"
+                        aria-valuemin="0" aria-valuemax="10" aria-valuenow="1">
+                        <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- 질문 폼 -->
+                <form id="book-test-form">
+
+                    <!-- QUESTION 01 -->
+                    <fieldset class="quiz-question is-active" data-question="1">
+                        <legend>01. 요즘 당신의 마음과 가장 가까운 것은 무엇인가요?</legend>
+
+                        <p class="quiz-question-description">
+                            지금 나에게 필요한 이야기를 떠올려 보세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question1" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">잠시 쉬어 가며 위로받고 싶어요.</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question1" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">새로운 세계로 떠나고 싶어요.</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question1" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">생각이 깊어지는 시간이 필요해요.</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question1" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">새로운 변화를 시작하고 싶어요.</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 02 -->
+                    <fieldset class="quiz-question" data-question="2" hidden>
+                        <legend>02. 서점에 들어가면 어떤 책에 먼저 눈길이 가나요?</legend>
+
+                        <p class="quiz-question-description">
+                            가장 먼저 손이 가는 책을 골라 보세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question2" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">따뜻한 문장과 감성적인 표지의 책</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question2" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">흥미로운 제목과 이야기가 담긴 소설</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question2" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">세상을 새로운 시선으로 바라보는 책</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question2" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">삶에 적용할 아이디어를 주는 책</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 03 -->
+                    <fieldset class="quiz-question" data-question="3" hidden>
+                        <legend>03. 하루를 마무리할 때 어떤 시간을 보내고 싶나요?</legend>
+
+                        <p class="quiz-question-description">
+                            가장 편안하게 느껴지는 순간을 골라 보세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question3" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">잔잔한 음악을 들으며 마음을 정리하기</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question3" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">재미있는 이야기에 푹 빠져 있기</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question3" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">오늘 있었던 일을 곰곰이 돌아보기</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question3" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">내일을 위한 계획을 세우기</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 04 -->
+                    <fieldset class="quiz-question" data-question="4" hidden>
+                        <legend>04. 책을 읽으며 가장 중요하게 생각하는 것은 무엇인가요?</legend>
+
+                        <p class="quiz-question-description">
+                            책을 통해 얻고 싶은 것을 생각해 보세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question4" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">공감과 위로를 얻는 것</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question4" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">몰입감 있는 이야기를 경험하는 것</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question4" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">새로운 관점과 질문을 얻는 것</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question4" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">실제로 활용할 지식과 방법을 얻는 것</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 05 -->
+                    <fieldset class="quiz-question" data-question="5" hidden>
+                        <legend>05. 지금 여행을 떠난다면 어떤 곳으로 가고 싶나요?</legend>
+
+                        <p class="quiz-question-description">
+                            당신의 취향을 여행에 비유해 보세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question5" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">조용한 바닷가의 작은 숙소</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question5" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">신비로운 분위기의 낯선 마을</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question5" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">역사와 이야기가 가득한 오래된 도시</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question5" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">새로운 도전을 할 수 있는 활기찬 도시</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 06 -->
+                    <fieldset class="quiz-question" data-question="6" hidden>
+                        <legend>06. 책 속 인물에게 가장 바라는 것은 무엇인가요?</legend>
+
+                        <p class="quiz-question-description">
+                            어떤 인물의 이야기를 응원하고 싶나요?
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question6" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">상처를 딛고 다시 행복해지는 사람</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question6" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">예상하지 못한 모험을 시작하는 사람</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question6" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">자신만의 답을 찾아가는 사람</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question6" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">끊임없이 배우고 성장하는 사람</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 07 -->
+                    <fieldset class="quiz-question" data-question="7" hidden>
+                        <legend>07. 책을 다 읽은 뒤 어떤 기분이 들면 좋을까요?</legend>
+
+                        <p class="quiz-question-description">
+                            책장을 덮는 순간을 상상해 보세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question7" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">마음이 포근해지고 편안해지는 기분</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question7" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">멋진 이야기를 경험한 듯한 설렘</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question7" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">오래도록 생각할 거리가 남는 기분</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question7" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">무언가를 시작할 용기가 생기는 기분</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 08 -->
+                    <fieldset class="quiz-question" data-question="8" hidden>
+                        <legend>08. 친구가 책을 추천해 달라고 한다면?</legend>
+
+                        <p class="quiz-question-description">
+                            평소 당신이 좋아할 만한 추천을 골라 보세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question8" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">힘든 날 마음을 달래 주는 책</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question8" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">시간 가는 줄 모르고 읽는 이야기</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question8" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">삶과 세상을 깊이 생각하게 하는 책</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question8" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">생활에 좋은 변화를 가져오는 책</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 09 -->
+                    <fieldset class="quiz-question" data-question="9" hidden>
+                        <legend>09. 책을 읽을 때 가장 선호하는 분위기는 무엇인가요?</legend>
+
+                        <p class="quiz-question-description">
+                            집중이 잘되는 분위기를 선택해 주세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question9" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">햇살이 드는 창가, 따뜻한 차 한 잔</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question9" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">주변이 조용해질 만큼의 깊은 몰입</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question9" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">밑줄과 메모를 남길 수 있는 책상</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question9" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">새로운 목표를 정리하는 나만의 공간</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUESTION 10 -->
+                    <fieldset class="quiz-question" data-question="10" hidden>
+                        <legend>10. 지금 당신에게 가장 필요한 한 문장은?</legend>
+
+                        <p class="quiz-question-description">
+                            마음이 이끄는 문장을 선택해 주세요.
+                        </p>
+
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="question10" value="healing" required>
+                                <span class="option-number">A</span>
+                                <span class="option-text">“조금 느려도 괜찮아.”</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question10" value="story">
+                                <span class="option-number">B</span>
+                                <span class="option-text">“세상에는 아직 모르는 이야기가 많아.”</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question10" value="thinking">
+                                <span class="option-number">C</span>
+                                <span class="option-text">“질문하는 순간 새로운 길이 열려.”</span>
+                            </label>
+
+                            <label class="quiz-option">
+                                <input type="radio" name="question10" value="growth">
+                                <span class="option-number">D</span>
+                                <span class="option-text">“오늘의 작은 선택이 내일을 바꿔.”</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+
+                    <!-- QUIZ NAVIGATION -->
+                    <div class="quiz-navigation">
+
+                        <button type="button" class="btn btn-outline" id="prev-question" disabled>
+                            <span aria-hidden="true">←</span>
+                            이전
+                        </button>
+
+                        <button type="button" class="btn btn-primary" id="next-question">
+                            다음 질문
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+                        <button type="submit" class="btn btn-primary" id="submit-test" hidden>
+                            결과 확인하기
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+                    </div>
+
+                    <p class="quiz-notice" id="quiz-notice" role="status" aria-live="polite">
+                        마음이 가는 답을 하나 선택해 주세요.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- 04. BOTTOM MESSAGE -->
+        <section class="test-bottom">
+            <div class="test-bottom-inner">
+                <p class="eyebrow">BOOKMATE'S NOTE</p>
+                <h2>모든 책이 모든 사람에게<br>같은 이야기를 건네지는 않으니까요.</h2>
+                <p>당신만의 속도로, 당신만의 이야기를 만나 보세요.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 공통 푸터 -->
+    <div id="common-footer"></div>
+
+</body>
+
+</html>

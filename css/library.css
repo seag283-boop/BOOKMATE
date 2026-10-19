@@ -1,0 +1,740 @@
+/* MY LIBRARY */
+
+.library-page {
+    overflow: hidden;
+    background: var(--color-bg);
+}
+
+.library-container {
+    width: min(1240px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.library-page button,
+.library-page a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.library-page button {
+    font: inherit;
+}
+
+/* 공통 텍스트 */
+
+.section-eyebrow {
+    margin-bottom: 18px;
+    color: var(--color-olive);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.library-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 42px;
+}
+
+.library-section-heading h2 {
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -1.5px;
+}
+
+.library-section-description {
+    color: var(--color-muted);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 01. HERO */
+
+.library-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 470px;
+    padding: 80px 0;
+    background: #EEE7DA;
+    isolation: isolate;
+}
+
+.library-hero .library-container {
+    position: relative;
+    z-index: 2;
+}
+
+.library-hero h1 {
+    margin: 0 0 26px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: clamp(64px, 9vw, 108px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -5px;
+}
+
+.library-hero h1 span {
+    color: var(--color-olive);
+}
+
+.library-hero-description {
+    margin-bottom: 30px;
+    color: #71675B;
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 2;
+}
+
+.library-hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    min-height: 48px;
+    padding: 0 22px;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    font-size: 13px;
+    text-decoration: none;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+.library-hero-link span {
+    font-size: 17px;
+    transition: transform var(--transition);
+}
+
+.library-hero-link:hover {
+    border-color: var(--color-text);
+    background: var(--color-text);
+    color: var(--color-white);
+}
+
+.library-hero-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+.library-hero-decoration {
+    position: absolute;
+    top: 50%;
+    right: max(8%, calc((100% - 1240px) / 2 + 70px));
+    display: grid;
+    place-items: center;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.decoration-circle {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(119, 125, 90, 0.35);
+    border-radius: 50%;
+}
+
+.decoration-circle::before,
+.decoration-circle::after {
+    position: absolute;
+    content: "";
+    border: 1px solid rgba(119, 125, 90, 0.25);
+    border-radius: 50%;
+}
+
+.decoration-circle::before {
+    inset: 20px;
+}
+
+.decoration-circle::after {
+    inset: 40px;
+}
+
+.decoration-text {
+    position: relative;
+    color: var(--color-olive);
+    font-family: var(--font-heading);
+    font-size: 23px;
+    line-height: 1.45;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* 02. READING OVERVIEW */
+
+.library-overview {
+    padding: 100px 0 90px;
+}
+
+.library-overview .library-section-heading {
+    margin-bottom: 36px;
+}
+
+.library-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.library-stat-card {
+    min-height: 180px;
+    padding: 28px 25px;
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.42);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.library-stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-beige);
+    background: var(--color-white);
+}
+
+.stat-label {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--color-muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.stat-number {
+    margin-bottom: 8px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+.stat-description {
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+/* 03. MY BOOKS */
+
+.library-books-section {
+    padding: 90px 0 110px;
+    border-top: 1px solid var(--color-border);
+}
+
+.library-books-section .library-section-heading {
+    margin-bottom: 35px;
+}
+
+.library-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.library-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.library-filter-btn {
+    min-height: 39px;
+    padding: 0 18px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-size: 13px;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+.library-filter-btn:hover {
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+.library-filter-btn.is-active {
+    border-color: var(--color-text);
+    background: var(--color-text);
+    color: var(--color-white);
+}
+
+.library-filter-btn:focus-visible,
+.library-add-link:focus-visible,
+.library-empty-link:focus-visible,
+.library-status-select:focus-visible,
+.library-remove-btn:focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 4px;
+}
+
+.library-add-link {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 17px;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 12px;
+    text-decoration: none;
+    transition:
+        background var(--transition),
+        border-color var(--transition);
+}
+
+.library-add-link:hover {
+    border-color: var(--color-beige);
+    background: #EEE7DA;
+}
+
+/* 도서 그리드 */
+
+.library-books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 42px 24px;
+}
+
+.library-book-card {
+    position: relative;
+    min-width: 0;
+    animation: libraryFadeIn 0.4s ease both;
+}
+
+.library-book-cover {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    margin-bottom: 18px;
+    background: #EEE9E0;
+}
+
+.library-book-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.library-book-card:hover .library-book-cover img {
+    transform: scale(1.035);
+}
+
+.library-book-cover-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.library-book-cover-placeholder[hidden] {
+    display: none;
+}
+
+.library-book-info {
+    padding: 0 2px;
+}
+
+.library-book-category {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: var(--color-olive);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.library-book-title {
+    margin-bottom: 8px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.library-book-author {
+    margin-bottom: 18px;
+    color: var(--color-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* 독서 상태 선택 */
+
+.library-book-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.library-status-select {
+    width: 100%;
+    min-width: 0;
+    min-height: 38px;
+    padding: 0 9px;
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+    background: transparent;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.library-status-select:hover {
+    border-color: var(--color-olive);
+}
+
+.library-remove-btn {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-size: 18px;
+    transition:
+        border-color var(--transition),
+        color var(--transition),
+        background var(--transition);
+}
+
+.library-remove-btn:hover {
+    border-color: #B66E61;
+    background: #F5E9E5;
+    color: #9E4D40;
+}
+
+/* 빈 책장 */
+
+.library-empty {
+    padding: 85px 20px;
+    border: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.library-empty[hidden] {
+    display: none;
+}
+
+.library-empty-icon {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--color-olive);
+    font-family: var(--font-heading);
+    font-size: 43px;
+}
+
+.library-empty h3 {
+    margin-bottom: 13px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.library-empty p {
+    margin-bottom: 25px;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.library-empty-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--color-olive);
+    color: var(--color-text);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* 04. QUOTE */
+
+.library-quote-section {
+    padding: 95px 0 105px;
+    background: #EEE7DA;
+    text-align: center;
+}
+
+.library-quote-section .section-eyebrow {
+    margin-bottom: 28px;
+}
+
+.library-quote {
+    margin-bottom: 25px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 4vw, 47px);
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: -1.5px;
+    word-break: keep-all;
+}
+
+.library-quote span {
+    color: var(--color-olive);
+}
+
+.library-quote-description {
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* ANIMATION */
+
+@keyframes libraryFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE: TABLET */
+
+@media (max-width: 1024px) {
+    .library-container {
+        width: calc(100% - 60px);
+    }
+
+    .library-hero-decoration {
+        right: 5%;
+        width: 250px;
+        height: 250px;
+    }
+
+    .library-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .library-books-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 38px 20px;
+    }
+
+    .library-section-heading {
+        align-items: flex-start;
+    }
+}
+
+/* RESPONSIVE: MOBILE */
+
+@media (max-width: 768px) {
+    .library-container {
+        width: calc(100% - 40px);
+    }
+
+    .library-hero {
+        min-height: 420px;
+        padding: 75px 0;
+    }
+
+    .library-hero h1 {
+        font-size: clamp(60px, 13vw, 86px);
+        letter-spacing: -3px;
+    }
+
+    .library-hero-description {
+        font-size: 13px;
+    }
+
+    .library-hero-decoration {
+        top: auto;
+        right: -75px;
+        bottom: 15px;
+        width: 190px;
+        height: 190px;
+        transform: none;
+        opacity: 0.45;
+    }
+
+    .decoration-text {
+        font-size: 16px;
+    }
+
+    .library-overview {
+        padding: 70px 0;
+    }
+
+    .library-books-section {
+        padding: 70px 0 80px;
+    }
+
+    .library-section-heading {
+        display: block;
+        margin-bottom: 28px;
+    }
+
+    .library-section-heading h2 {
+        font-size: 32px;
+    }
+
+    .library-section-description {
+        margin-top: 12px;
+        font-size: 12px;
+    }
+
+    .library-stat-card {
+        min-height: 150px;
+        padding: 22px 18px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .stat-label {
+        margin-bottom: 14px;
+    }
+
+    .library-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .library-filter-list {
+        width: 100%;
+        gap: 6px;
+    }
+
+    .library-filter-btn {
+        flex: 1;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .library-add-link {
+        align-self: flex-end;
+    }
+
+    .library-books-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 34px 16px;
+    }
+
+    .library-book-cover {
+        margin-bottom: 13px;
+    }
+
+    .library-book-title {
+        font-size: 16px;
+    }
+
+    .library-book-author {
+        font-size: 11px;
+    }
+
+    .library-book-actions {
+        gap: 5px;
+    }
+
+    .library-status-select {
+        padding: 0 5px;
+        font-size: 11px;
+    }
+
+    .library-remove-btn {
+        width: 34px;
+        height: 38px;
+    }
+
+    .library-quote-section {
+        padding: 75px 0 80px;
+    }
+
+    .library-quote {
+        font-size: 30px;
+    }
+}
+
+/* RESPONSIVE: SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .library-container {
+        width: calc(100% - 30px);
+    }
+
+    .library-stats {
+        gap: 10px;
+    }
+
+    .library-stat-card {
+        min-height: 135px;
+        padding: 18px 14px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .library-books-grid {
+        gap: 30px 12px;
+    }
+
+    .library-book-title {
+        font-size: 14px;
+    }
+
+    .library-filter-btn {
+        padding: 0 6px;
+        font-size: 11px;
+    }
+}
+
+/* 모션 최소화 설정 존중 */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .library-page *,
+    .library-page *::before,
+    .library-page *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

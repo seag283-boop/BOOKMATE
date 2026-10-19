@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BOOKS | BOOKMATE</title>
+    <meta name="description" content="BOOKMATE에서 취향과 기분에 맞는 책을 찾아보세요.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/books.css">
+
+    <script src="js/common.js" defer></script>
+    <script src="js/books.js" defer></script>
+</head>
+
+<body data-page="books">
+
+    <!-- 공통 헤더 -->
+    <div id="common-header"></div>
+
+    <main>
+
+        <!-- 01. PAGE HERO -->
+        <section class="books-hero">
+            <div class="books-hero-inner">
+                <p class="eyebrow">YOUR NEXT FAVORITE BOOK</p>
+
+                <h1>
+                    마음이 머무는 곳,<br>
+                    <span>책을 발견하는 시간.</span>
+                </h1>
+
+                <p class="books-hero-description">
+                    다양한 이야기 속에서 지금의 나에게 어울리는 책을 찾아보세요.
+                </p>
+
+                <div class="books-hero-bottom">
+                    <span>EXPLORE OUR BOOK COLLECTION</span>
+                    <span aria-hidden="true">↓</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 02. BOOK COLLECTION -->
+        <section class="books-section section-padding">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">BOOK COLLECTION</p>
+                    <h2>모든 책 둘러보기</h2>
+                </div>
+
+                <p class="section-description">
+                    오늘 읽고 싶은 이야기를 찾아보세요.
+                </p>
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="books-toolbar">
+
+                <form class="books-search" id="books-search-form" role="search">
+                    <label class="sr-only" for="book-search">
+                        책 제목 또는 저자 검색
+                    </label>
+
+                    <input type="search" id="book-search" placeholder="책 제목이나 저자를 검색해 보세요." autocomplete="off">
+
+                    <button type="submit" aria-label="검색">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M16 16L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </form>
+
+                <label class="sr-only" for="book-sort">도서 정렬</label>
+
+                <select id="book-sort" class="books-sort">
+                    <option value="default">기본순</option>
+                    <option value="title">제목순</option>
+                    <option value="author">저자순</option>
+                </select>
+
+            </div>
+
+
+            <!-- CATEGORY FILTER -->
+            <div class="books-filter" aria-label="장르별 도서 필터">
+                <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">
+                    전체
+                </button>
+
+                <button type="button" class="filter-btn" data-category="소설" aria-pressed="false">
+                    소설
+                </button>
+
+                <button type="button" class="filter-btn" data-category="에세이" aria-pressed="false">
+                    에세이
+                </button>
+
+                <button type="button" class="filter-btn" data-category="인문" aria-pressed="false">
+                    인문
+                </button>
+
+                <button type="button" class="filter-btn" data-category="자기계발" aria-pressed="false">
+                    자기계발
+                </button>
+            </div>
+
+
+            <!-- RESULT COUNT -->
+            <div class="books-result-bar">
+                <p>BOOKS <span id="books-count">8</span></p>
+                <p class="books-result-note">BOOKMATE CURATION</p>
+            </div>
+
+
+            <!-- BOOK GRID -->
+            <div class="books-grid" id="books-grid">
+
+                <!-- BOOK 01 -->
+                <article class="book-card" data-title="불편한 편의점" data-author="김호연" data-category="소설"
+                    data-id="uncomfortable">
+                    <a href="#" class="book-cover">
+                        <img src="./img/불편한 편의점.webp" alt="불편한 편의점 도서 이미지" loading="lazy">
+                        <span class="book-cover-label">BEST PICK</span>
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">소설</p>
+                        <h3>불편한 편의점</h3>
+                        <p class="book-author">김호연</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#일상 #위로</span>
+                            <button type="button" class="favorite-btn" data-favorite="uncomfortable"
+                                aria-label="불편한 편의점 즐겨찾기" aria-pressed="false">♡</button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- BOOK 02 -->
+                <article class="book-card" data-title="달러구트 꿈 백화점" data-author="이미예" data-category="소설"
+                    data-id="dalgurtt">
+                    <a href="#" class="book-cover">
+                        <img src="./img/달러구트 꿈 백화점.jfif" alt="달러구트 꿈 백화점 도서 이미지" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">소설</p>
+                        <h3>달러구트 꿈 백화점</h3>
+                        <p class="book-author">이미예</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#상상 #꿈</span>
+                            <button type="button" class="favorite-btn" data-favorite="dalgurtt"
+                                aria-label="달러구트 꿈 백화점 즐겨찾기" aria-pressed="false">♡</button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- BOOK 03 -->
+                <article class="book-card" data-title="어서 오세요, 휴남동 서점입니다" data-author="황보름" data-category="소설"
+                    data-id="hyunamdong">
+                    <a href="#" class="book-cover">
+                        <img src="./img/어서오세요 휴남동 서점입니다.jpg" alt="어서 오세요, 휴남동 서점입니다 도서 이미지" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">소설</p>
+                        <h3>어서 오세요, 휴남동 서점입니다</h3>
+                        <p class="book-author">황보름</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#휴식 #관계</span>
+                            <button type="button" class="favorite-btn" data-favorite="hyunamdong"
+                                aria-label="어서 오세요, 휴남동 서점입니다 즐겨찾기" aria-pressed="false">♡</button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- BOOK 04 -->
+                <article class="book-card" data-title="아무튼, 문구" data-author="김규림" data-category="에세이"
+                    data-id="stationery">
+                    <a href="#" class="book-cover">
+                        <img src="./img/아무튼, 문구.jpg" alt="아무튼, 문구 도서 이미지" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">에세이</p>
+                        <h3>아무튼, 문구</h3>
+                        <p class="book-author">김규림</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#취향 #기록</span>
+                            <button type="button" class="favorite-btn" data-favorite="stationery"
+                                aria-label="아무튼, 문구 즐겨찾기" aria-pressed="false">♡</button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- BOOK 05 -->
+                <article class="book-card" data-title="나는 나로 살기로 했다" data-author="김수현" data-category="에세이"
+                    data-id="live-as-me">
+                    <a href="#" class="book-cover">
+                        <img src="./img/나는 나로 살기로 했다..jpg" alt="나는 나로 살기로 했다 도서 이미지" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">에세이</p>
+                        <h3>나는 나로 살기로 했다</h3>
+                        <p class="book-author">김수현</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#자존감 #위로</span>
+                            <button type="button" class="favorite-btn" data-favorite="live-as-me"
+                                aria-label="나는 나로 살기로 했다 즐겨찾기" aria-pressed="false">♡</button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- BOOK 06 -->
+                <article class="book-card" data-title="미움받을 용기" data-author="기시미 이치로, 고가 후미타케" data-category="인문"
+                    data-id="courage">
+                    <a href="#" class="book-cover">
+                        <img src="./img/미움받을 용기.jpg" alt="미움받을 용기 도서 이미지" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">인문</p>
+                        <h3>미움받을 용기</h3>
+                        <p class="book-author">기시미 이치로, 고가 후미타케</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#관계 #성장</span>
+                            <button type="button" class="favorite-btn" data-favorite="courage" aria-label="미움받을 용기 즐겨찾기"
+                                aria-pressed="false">♡</button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- BOOK 07 -->
+                <article class="book-card" data-title="아주 작은 습관의 힘" data-author="제임스 클리어" data-category="자기계발"
+                    data-id="atomic-habits">
+                    <a href="#" class="book-cover">
+                        <img src="./img/아주 작은 습관의 힘.jpg" alt="아주 작은 습관의 힘 도서 이미지" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">자기계발</p>
+                        <h3>아주 작은 습관의 힘</h3>
+                        <p class="book-author">제임스 클리어</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#습관 #성장</span>
+                            <button type="button" class="favorite-btn" data-favorite="atomic-habits"
+                                aria-label="아주 작은 습관의 힘 즐겨찾기" aria-pressed="false">♡</button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- BOOK 08 -->
+                <article class="book-card" data-title="문장 수집가의 하루" data-author="BOOKMATE 큐레이션" data-category="에세이"
+                    data-id="sentence">
+                    <a href="#" class="book-cover">
+                        <img src="./img/문장 수집가들의 인생 가이드.jpg" alt="문장 수집가의 하루 도서 이미지" loading="lazy">
+                    </a>
+
+                    <div class="book-info">
+                        <p class="book-category">에세이</p>
+                        <h3>문장 수집가들의 인생 가이드</h3>
+                        <p class="book-author">BOOKMATE 큐레이션</p>
+
+                        <div class="book-card-bottom">
+                            <span class="book-keyword">#문장 #기록</span>
+                            <button type="button" class="favorite-btn" data-favorite="sentence"
+                                aria-label="문장 수집가의 하루 즐겨찾기" aria-pressed="false">♡</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div class="books-empty" id="books-empty" hidden>
+                <p class="empty-icon" aria-hidden="true">⌕</p>
+                <h3>찾으시는 책이 없어요.</h3>
+                <p>다른 제목이나 저자로 검색해 보세요.</p>
+
+                <button type="button" class="btn btn-outline" id="reset-books">
+                    전체 도서 보기
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- 공통 푸터 -->
+    <div id="common-footer"></div>
+
+</body>
+
+</html>

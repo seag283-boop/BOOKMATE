@@ -1,0 +1,807 @@
+/* BOOKMATE - TEST RESULT
+   File: css/result.css */
+
+
+/* 01. BASE */
+
+.result-page {
+    overflow: hidden;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.result-page [hidden] {
+    display: none !important;
+}
+
+.result-page button,
+.result-page a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.result-page button:focus-visible,
+.result-page a:focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 4px;
+}
+
+
+/* 02. RESULT HERO */
+
+.result-hero {
+    padding: 100px 24px 70px;
+    background-color: var(--color-bg);
+}
+
+.result-hero-inner {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding-bottom: 55px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.result-hero .eyebrow {
+    margin-bottom: 24px;
+    color: var(--color-olive);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.result-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -2px;
+}
+
+.result-hero h1 span {
+    color: var(--color-olive);
+}
+
+.result-hero-description {
+    margin-top: 24px;
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* 03. RESULT SECTION */
+
+.result-section {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+.result-content,
+.result-empty {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* 04. EMPTY RESULT */
+
+.result-empty {
+    padding: 100px 24px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.result-empty .eyebrow {
+    margin-bottom: 24px;
+    color: var(--color-olive);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.result-empty h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.result-empty p:not(.eyebrow) {
+    margin-top: 22px;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.result-empty .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+    min-height: 50px;
+    padding: 0 24px;
+}
+
+
+/* 05. RESULT TYPE CARD */
+
+.result-type-card {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: stretch;
+    min-height: 420px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white);
+}
+
+.result-type-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 55px;
+}
+
+.result-type-label {
+    margin-bottom: 22px;
+    color: var(--color-olive);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.result-type-copy h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -1.5px;
+}
+
+.result-subtitle {
+    margin-top: 14px;
+    color: var(--color-olive);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.result-description {
+    max-width: 460px;
+    margin-top: 22px;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 2;
+    word-break: keep-all;
+}
+
+
+/* TYPE KEYWORDS */
+
+.result-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.result-keyword {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 13px;
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: 11px;
+}
+
+
+/* 06. RESULT VISUAL */
+
+.result-type-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-height: 420px;
+    padding: 35px;
+    overflow: hidden;
+    background-color: #EAE5D9;
+    text-align: center;
+}
+
+.result-visual-small {
+    color: var(--color-olive);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.result-visual-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(61, 52, 43, 0.25);
+    border-radius: 50%;
+    background-color: var(--color-bg);
+}
+
+#result-visual-symbol {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.result-visual-caption {
+    color: var(--color-muted);
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+
+/* 07. SECTION HEADINGS */
+
+.result-section-heading {
+    margin-bottom: 36px;
+}
+
+.result-section-heading .eyebrow {
+    margin-bottom: 16px;
+    color: var(--color-olive);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.result-section-heading h3,
+.result-tip-heading h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(27px, 3vw, 36px);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+
+.result-section-heading>p:last-child {
+    margin-top: 14px;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* 08. TASTE SCORES */
+
+.result-score-section {
+    margin-top: 100px;
+}
+
+.result-scores {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+}
+
+.result-score-item {
+    display: grid;
+    grid-template-columns: 135px 1fr 45px;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-score-name {
+    color: var(--color-text);
+    font-size: 13px;
+}
+
+.result-score-track {
+    width: 100%;
+    height: 6px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--color-border);
+}
+
+.result-score-bar {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--color-olive);
+    transition: width 0.7s ease;
+}
+
+.result-score-value {
+    color: var(--color-muted);
+    font-size: 12px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* 09. RECOMMENDED BOOKS */
+
+.result-books-section {
+    margin-top: 110px;
+    padding-top: 70px;
+    border-top: 1px solid var(--color-border);
+}
+
+.result-books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.result-book-card {
+    min-width: 0;
+}
+
+.result-book-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.result-book-cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: #E9E0D2;
+}
+
+.result-book-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.result-book-link:hover .result-book-cover img {
+    transform: scale(1.04);
+}
+
+.result-book-cover-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: var(--color-muted);
+    font-family: var(--font-heading);
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.result-book-info {
+    padding-top: 18px;
+}
+
+.result-book-category {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--color-olive);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.result-book-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.result-book-author {
+    margin-top: 7px;
+    color: var(--color-muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.result-books-notice {
+    margin-top: 26px;
+    color: var(--color-muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* 10. BOOKMATE TIP */
+
+.result-tip {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+    gap: 45px;
+    margin-top: 100px;
+    padding: 45px 50px;
+    background-color: #EAE5D9;
+}
+
+.result-tip-heading .eyebrow {
+    margin-bottom: 14px;
+    color: var(--color-olive);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.result-tip-heading h3 {
+    font-size: 25px;
+}
+
+#result-tip-text {
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 2;
+    word-break: keep-all;
+}
+
+
+/* 11. RESULT ACTIONS */
+
+.result-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 65px;
+}
+
+.result-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 50px;
+    padding: 0 23px;
+}
+
+.result-home-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 45px;
+    margin-left: 10px;
+    color: var(--color-muted);
+    font-size: 12px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color var(--transition);
+}
+
+.result-home-link:hover {
+    color: var(--color-text);
+}
+
+
+/* 12. ANIMATIONS */
+
+.result-content {
+    animation: resultFadeIn 0.5s ease both;
+}
+
+@keyframes resultFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 13. TABLET */
+
+@media (max-width: 1024px) {
+
+    .result-hero {
+        padding-top: 80px;
+    }
+
+    .result-section {
+        padding-top: 45px;
+        padding-bottom: 90px;
+    }
+
+    .result-type-copy {
+        padding: 40px 32px;
+    }
+
+    .result-type-visual {
+        min-height: 380px;
+    }
+
+    .result-visual-circle {
+        width: 190px;
+        height: 190px;
+    }
+
+    #result-visual-symbol {
+        font-size: 32px;
+    }
+
+    .result-books-grid {
+        gap: 22px;
+    }
+
+    .result-tip {
+        gap: 30px;
+        padding: 38px;
+    }
+}
+
+
+/* 14. MOBILE */
+
+@media (max-width: 768px) {
+
+    .result-hero {
+        padding: 65px 20px 45px;
+    }
+
+    .result-hero-inner {
+        padding-bottom: 38px;
+    }
+
+    .result-hero .eyebrow {
+        margin-bottom: 18px;
+        font-size: 9px;
+    }
+
+    .result-hero h1 {
+        font-size: clamp(32px, 7vw, 44px);
+        letter-spacing: -1px;
+    }
+
+    .result-hero-description {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .result-section {
+        padding: 35px 20px 75px;
+    }
+
+    .result-empty {
+        padding: 65px 20px;
+    }
+
+    .result-type-card {
+        grid-template-columns: 1fr;
+    }
+
+    .result-type-copy {
+        padding: 38px 25px;
+    }
+
+    .result-type-label {
+        margin-bottom: 18px;
+        font-size: 9px;
+    }
+
+    .result-type-copy h2 {
+        font-size: 37px;
+    }
+
+    .result-subtitle {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .result-description {
+        margin-top: 18px;
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .result-keywords {
+        margin-top: 22px;
+    }
+
+    .result-keyword {
+        min-height: 28px;
+        font-size: 10px;
+    }
+
+    .result-type-visual {
+        min-height: 290px;
+        gap: 18px;
+    }
+
+    .result-visual-circle {
+        width: 170px;
+        height: 170px;
+    }
+
+    #result-visual-symbol {
+        font-size: 29px;
+    }
+
+    .result-score-section {
+        margin-top: 70px;
+    }
+
+    .result-section-heading {
+        margin-bottom: 28px;
+    }
+
+    .result-section-heading h3 {
+        font-size: 28px;
+    }
+
+    .result-section-heading>p:last-child {
+        font-size: 12px;
+    }
+
+    .result-scores {
+        gap: 22px;
+    }
+
+    .result-score-item {
+        grid-template-columns: 95px minmax(0, 1fr) 32px;
+        gap: 12px;
+    }
+
+    .result-score-name {
+        font-size: 11px;
+    }
+
+    .result-score-value {
+        font-size: 11px;
+    }
+
+    .result-books-section {
+        margin-top: 75px;
+        padding-top: 55px;
+    }
+
+    .result-books-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 16px;
+    }
+
+    .result-book-info {
+        padding-top: 13px;
+    }
+
+    .result-book-title {
+        font-size: 15px;
+    }
+
+    .result-book-author {
+        font-size: 11px;
+    }
+
+    .result-tip {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 75px;
+        padding: 30px 25px;
+    }
+
+    .result-tip-heading h3 {
+        font-size: 23px;
+    }
+
+    #result-tip-text {
+        font-size: 12px;
+    }
+
+    .result-actions {
+        gap: 10px;
+        margin-top: 45px;
+    }
+
+    .result-actions .btn {
+        min-height: 46px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+
+    .result-home-link {
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0 0;
+    }
+}
+
+
+/* 15. SMALL MOBILE */
+
+@media (max-width: 420px) {
+
+    .result-hero h1 {
+        font-size: 31px;
+    }
+
+    .result-type-copy {
+        padding: 30px 20px;
+    }
+
+    .result-type-copy h2 {
+        font-size: 32px;
+    }
+
+    .result-type-visual {
+        min-height: 260px;
+    }
+
+    .result-visual-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    #result-visual-symbol {
+        font-size: 25px;
+    }
+
+    .result-score-item {
+        grid-template-columns: 80px minmax(0, 1fr) 28px;
+        gap: 8px;
+    }
+
+    .result-score-name,
+    .result-score-value {
+        font-size: 10px;
+    }
+
+    .result-books-grid {
+        gap: 25px 12px;
+    }
+
+    .result-book-title {
+        font-size: 14px;
+    }
+
+    .result-tip {
+        padding: 25px 20px;
+    }
+
+    .result-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .result-actions .btn {
+        width: 100%;
+    }
+}
+
+
+/* 16. REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .result-page *,
+    .result-page *::before,
+    .result-page *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
